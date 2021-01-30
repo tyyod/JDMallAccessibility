@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JDMallAccessibility</string>
+    <string name="accessibility_service_label">京东商城辅助</string>
+    <string name="accessibility_service_description">京东商城辅助工具是一款购物辅助工具，帮助您快速购买到指定的物品</string>
+</resources>
