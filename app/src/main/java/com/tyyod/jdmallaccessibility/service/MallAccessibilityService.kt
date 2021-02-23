@@ -1,6 +1,7 @@
 package com.tyyod.jdmallaccessibility.service
 
 import android.accessibilityservice.AccessibilityService
+import android.util.Log
 import android.view.accessibility.AccessibilityEvent
 import android.view.accessibility.AccessibilityEvent.*
 import com.orhanobut.logger.Logger
@@ -17,7 +18,7 @@ class MallAccessibilityService: AccessibilityService() {
             return
         }
 
-        var eventTypeStr = when (event.eventType) {
+        val eventTypeStr = when (event.eventType) {
             TYPE_VIEW_CLICKED -> "TYPE_VIEW_CLICKED"
             TYPE_VIEW_LONG_CLICKED -> "TYPE_VIEW_LONG_CLICKED"
             TYPE_VIEW_SELECTED -> "TYPE_VIEW_SELECTED"
@@ -39,8 +40,9 @@ class MallAccessibilityService: AccessibilityService() {
             TYPE_GESTURE_DETECTION_START -> "TYPE_GESTURE_DETECTION_START"
             TYPE_GESTURE_DETECTION_END -> "TYPE_GESTURE_DETECTION_END"
             TYPE_ANNOUNCEMENT -> "TYPE_ANNOUNCEMENT"
-            else -> "Unknow"
+            else -> "Unknown Event Type"
         }
+        Log.e("Tod", "class Name: ${event.className}")
         Logger.d("onAccessibilityEvent: $eventTypeStr  EventId: ${event.eventType}")
     }
 
