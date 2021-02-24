@@ -6,7 +6,7 @@ import androidx.activity.viewModels
 import androidx.databinding.DataBindingUtil
 import com.tyyod.jdmallaccessibility.R
 import com.tyyod.jdmallaccessibility.databinding.ActivityMainBinding
-import com.tyyod.jdmallaccessibility.ui.viewmodel.MainViewModel
+import com.tyyod.jdmallaccessibility.ui.viewModel.MainViewModel
 
 class MainActivity : AppCompatActivity() {
     private lateinit var activityMainBinding: ActivityMainBinding;
