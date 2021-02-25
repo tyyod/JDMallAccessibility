@@ -1,6 +1,7 @@
 package com.tyyod.jdmallaccessibility
 
 import android.app.Application
+import android.webkit.WebView
 import com.orhanobut.logger.AndroidLogAdapter
 import com.orhanobut.logger.FormatStrategy
 import com.orhanobut.logger.Logger
@@ -10,6 +11,9 @@ class JDMallAccessibilityApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         initLogger()
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+            WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG)
+        }
     }
 
     private fun initLogger() {

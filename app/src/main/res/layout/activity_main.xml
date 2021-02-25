@@ -21,7 +21,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/tv_start_service"
-            app:loadUrl="@{mainViewModel.webUrl}"/>
+            app:setWebViewSettings="@{mainViewModel.webViewSetting}"
+            app:setWebViewClient="@{mainViewModel.webViewClient}"
+            app:setWebChromeClient="@{mainViewModel.webChromeClient}"
+            app:loadUrl="@{mainViewModel.webUrl}" />
 
         <TextView
             android:id="@+id/tv_start_service"

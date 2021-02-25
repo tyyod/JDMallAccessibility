@@ -1,5 +1,6 @@
 package com.tyyod.jdmallaccessibility.ui.model
 
-data class WebSettingModel(
-    val javaScriptEnabled: Boolean = false
+data class WebViewSettings(
+    val javaScriptEnabled: Boolean = true,
+    val domStorageEnabled: Boolean = true,
 )

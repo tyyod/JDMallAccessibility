@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.tyyod.jdmallaccessibility"
-        minSdkVersion 18
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode gitVersionCode()
         versionName "1.0.0"
