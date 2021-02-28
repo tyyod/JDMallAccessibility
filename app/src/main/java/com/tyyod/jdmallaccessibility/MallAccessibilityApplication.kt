@@ -11,9 +11,7 @@ class JDMallAccessibilityApplication: Application() {
     override fun onCreate() {
         super.onCreate()
         initLogger()
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
-            WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG)
-        }
+        WebView.setWebContentsDebuggingEnabled(BuildConfig.DEBUG)
     }
 
     private fun initLogger() {
